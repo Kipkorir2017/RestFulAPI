@@ -7,7 +7,7 @@ class Initiative(models.Model):
   user = models.ForeignKey(User,on_delete=models.CASCADE)
   name = models.CharField(max_length=200)
   description = models.TextField(max_length=3000)
-  due_date = models.DateField(blank=True)
+  due_date = models.DateField(blank=True,null=True)
   target_amount = models.FloatField()
   
   def __str__(self):
